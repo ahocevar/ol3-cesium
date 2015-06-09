@@ -229,6 +229,9 @@ olcs.core.OLImageryProvider.prototype.requestImage = function(x, y, level) {
     if (!goog.isNull(this.transform_)) {
       tileCoord = this.transform_(tileCoord, this.projection_);
     }
+    if (this.tilingScheme_ instanceof Cesium.GeographicTilingScheme) {
+      tileCoord[0] = level + 1; // Why do we need this?
+    }
     var url = tileUrlFunction(tileCoord, 1, this.projection_);
     return goog.isDef(url) ?
            Cesium.ImageryProvider.loadImage(this, url) : this.emptyCanvas_;
