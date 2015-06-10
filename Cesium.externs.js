@@ -989,7 +989,7 @@ Cesium.optionsPrimitive;
 
 /**
  * @constructor
- * @param {Cesium.optionsPrimitive=} opt_opts 
+ * @param {Cesium.optionsPrimitive=} opt_opts
  */
 Cesium.Primitive = function(opt_opts) {};
 
@@ -1164,13 +1164,13 @@ Cesium.optionsGeometryInstance = function() {};
  */
 Cesium.optionsGeometryInstance.prototype.geometry;
 
- 
+
 /**
  * @constructor
  * @struct {Cesium.GeometryInstanceAttribute}
  */
 Cesium.GeometryInstanceAttribute;
- 
+
 /**
  * @type {Cesium.GeometryInstanceAttribute| undefined}
  */
@@ -1468,6 +1468,13 @@ Cesium.TilingScheme = function() {};
  * @type {Cesium.Rectangle}
  */
 Cesium.TilingScheme.prototype.rectangle;
+
+
+/**
+ * @param {number} level
+ * @return {number}
+ */
+Cesium.TilingScheme.prototype.getNumberOfYTilesAtLevel = function(level) {};
 
 
 /**
